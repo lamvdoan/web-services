@@ -17,35 +17,27 @@ NOTE: This is probably where things went south and not working
 
 1. Create a war file:
 
-        ```shell script
         cd  ~/<directory with the code>/gmail_checker/src/main/webapp
         jar -cvf gmail_checker.war *
-        ``` 
 
 2. Copy the generated .war file into tomcat/webapps/
 3. Start Tomcat
         
-        ```shell script
         cd ~/<tomcat directory>
         ./tomcat/bin/catalina.sh run
-        ```
 
 4. I created a test request to see if a plain HTTP GET request would work. The test request should return a status of 200 with an output of 5.
 
-        ```shell script
         curl -X GET -H "Content-Type: application/json" -H "Accept: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: 60bf28b7-39cb-fc40-2445-d2e2a2f671c5" "http://localhost:8080/gmail_checker/api/emails"
-        ```
 
 5. Call the POST request:
 
-        ```shell script
         curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: ef8edb91-43ed-0ff3-4b93-9ab740e3c066" -d '{
         "emails" : ["Lamvdoan@gmail.com", 
         "Lamvdoan+5@gmail.com",
         "Lamv.doan@gmail.com",
         "Lamvdoan1@gmail.com"
         ]}' "http://localhost:8080/api/emails"
-        ```
 
 6. The response should have a total count of 2.
 
