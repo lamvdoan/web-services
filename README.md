@@ -6,8 +6,8 @@ emails that are from Gmail (ignores underscores and anything onwards with the pl
 
 
 ### Reference
-[Gradle War File Generation](https://docs.gradle.org/current/userguide/war_plugin.html)
-[Quick Guide to set up Tomcat](https://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html#configure)
+* [Gradle War File Generation](https://docs.gradle.org/current/userguide/war_plugin.html)
+* [Quick Guide to set up Tomcat](https://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html#configure)
 
 
 
