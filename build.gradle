@@ -10,6 +10,9 @@ plugins {
     // Apply the java plugin to add support for Java
     id 'java'
 
+    // Create WAR file
+    id 'war'
+
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
 }
@@ -38,6 +41,9 @@ dependencies {
 
     // Support import javax.xml.bind.annotation.XmlRootElement;
     compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2.4'
+
+    // Required to bypass InjectionManagerFactory bug
+    compile 'org.glassfish.jersey.inject:jersey-hk2:2.29'
 }
 
 application {

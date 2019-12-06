@@ -5,7 +5,11 @@
 build
 gradle*
 settings.gradle
+gradle/
+target/
+
 *.iml
 .idea
-gradle/
 .DS_Store
+
+war.sh
